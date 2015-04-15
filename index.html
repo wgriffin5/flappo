@@ -1,3 +1,13 @@
 <html>
   <head>
-    <title>
+    <title>Commentary with Angular</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="flappoNews" ng-controller="MainCtrl">
+    <div ng-repeat="post in posts | orderBy: '-upvotes'">
+      {{post.title}} - upvotes: {{post.upvotes}}
+    </div>
+  </body>
+</html>
+
