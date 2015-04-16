@@ -38,6 +38,38 @@ function($stateProvider, $urlRouterProvider) {
   }])
 
 
+
+.controller('PostsCtrl', [
+'$scope',
+'$stateParams',
+'posts',
+$scope.post = posts.posts[$stateParams.id];
+function($scope, $stateParams, posts){
+
+}
+
+
+$scope.addComment = function(){
+  if($scope.body === '') { return; }
+  $scope.post.comments.push({
+    body: $scope.body,
+    author: 'user',
+    upvotes: 0
+  });
+  $scope.body = '';
+};
+
+
+
+]);
+
+
+
+
+
+
+
+
 .controller('MainCtrl', [
 
 '$scope',
@@ -71,6 +103,10 @@ $scope.addPost = function(){
     title: $scope.title, 
     link: $scope.link,
     upvotes: 0
+    comments: [
+      {author: 'tim', body: 'suweet post mate', upvotes: 0},
+      {author: 'jono' body: 'noyce!', upvotes: 3}
+    ]
   });
 
   $scope.title = '';
