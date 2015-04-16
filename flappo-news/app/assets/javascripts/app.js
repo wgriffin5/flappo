@@ -1,4 +1,4 @@
-angular.module('flappoNews', ['ui.router'])
+angular.module('flappoNews', ['ui.router', 'templates'])
 
 .config([ 
 '$stateProvider',

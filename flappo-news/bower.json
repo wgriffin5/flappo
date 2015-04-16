@@ -1,0 +1,21 @@
+{
+  "name": "flappo-news",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wgriffin5/flappo",
+  "authors": [
+    "William Griffin <williamgriffin989@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "directory": "vendor/assets/bower_components",
+  "dependencies": {
+    "angular-ui-router": "~0.2.13",
+    "bootstrap": "~3.3.4"
+  }
+}
